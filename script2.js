@@ -79,14 +79,14 @@ async function displayAlbums() {
     let cardContainer = document.querySelector(".cardContainer")
     
     // FIX: Fetch the manual albums.json list
-    let a = await fetch(`/music/albums.json`)
+    let a = await fetch(`music/albums.json`)
     let response = await a.json();
 
     for (let index = 0; index < response.length; index++) {
         const folder = response[index];
         
         // Get the metadata of the folder 
-        let a = await fetch(`/music/${folder}/info.json`)
+        let a = await fetch(`music/${folder}/info.json`)
         let albumInfo = await a.json();
         
         cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="${folder}" class="card border">
@@ -196,4 +196,5 @@ async function main() {
 }
 
 main()
+
 
