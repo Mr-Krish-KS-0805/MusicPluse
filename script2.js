@@ -56,7 +56,7 @@ async function getsongs(folder) {
 
 const playMusic = (track, pause = false) => {
     // FIX: Ensure path is correct for GitHub Pages
-    currentsong.src = `/${currfolder}/` + track;
+    currentsong.src = `${currfolder}/` + track;
     
     if (!pause) {
         currentsong.play();
@@ -196,6 +196,7 @@ async function main() {
 }
 
 main()
+
 
 
 
