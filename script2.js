@@ -152,7 +152,7 @@ async function main() {
     previous.addEventListener("click", () => {
         currentsong.pause()
         console.log("Previous Clicked")
-        let currentName = currentsong.src.split("/").slice(-1)[0].replaceAll("%20", "")
+        let currentName = currentsong.src.split("/").slice(-1)[0].replaceAll("%20", " ")
         let index = songs.indexOf(currentName)
 
         if ((index - 1) >= 0) {
@@ -163,7 +163,8 @@ async function main() {
     // Add an event listener to next
     next.addEventListener("click", () => {
         currentsong.pause()
-        let currentName = currentsong.src.split("/").slice(-1)[0].replaceAll("%20", "")
+        console.log("Next Clicked")
+        let currentName = currentsong.src.split("/").slice(-1)[0].replaceAll("%20", " ")
         let index = songs.indexOf(currentName)
 
         if ((index + 1) < songs.length) {
@@ -199,6 +200,7 @@ async function main() {
 }
 
 main()
+
 
 
 
