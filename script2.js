@@ -24,7 +24,7 @@ async function getsongs(folder) {
     
     // FIX: Fetch the manual songs.json file instead of scanning the folder
     // We use a relative path so it works on GitHub and Localhost
-    let a = await fetch(`/${folder}/songs.json`)
+    let a = await fetch(`${folder}/songs.json`)
     songs = await a.json();
 
     // Show all the songs in the playlist
@@ -196,3 +196,4 @@ async function main() {
 }
 
 main()
+
