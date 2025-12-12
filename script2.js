@@ -90,7 +90,7 @@ async function displayAlbums() {
         let albumInfo = await a.json();
         
         cardContainer.innerHTML = cardContainer.innerHTML + `<div data-folder="${folder}" class="card border">
-                    <img src="/music/${folder}/cover.jpg" alt="">
+                    <img src="music/${folder}/cover.jpg" alt="">
                     <h2>${albumInfo.title}</h2>
                     <p>${albumInfo.description}</p>
                 </div>`
@@ -196,5 +196,6 @@ async function main() {
 }
 
 main()
+
 
 
